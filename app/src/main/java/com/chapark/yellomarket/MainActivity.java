@@ -36,30 +36,34 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar((Toolbar)findViewById(R.id.toolbar));
         mAdapter = new MyPagerAdapter(getSupportFragmentManager(), TAB_COUNT);
 
-//        pager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabs));
-//        tabs.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-//
-//
-//            @Override
-//            public void onTabSelected(TabLayout.Tab tab) {
-//                pager.setCurrentItem(tab.getPosition());
-//            }
-//
-//            @Override
-//            public void onTabUnselected(TabLayout.Tab tab) {
-//
-//            }
-//
-//            @Override
-//            public void onTabReselected(TabLayout.Tab tab) {
-//
-//            }
-//        });
 
+
+        pager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabs));
+        tabs.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+
+
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                pager.setCurrentItem(tab.getPosition());
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.menu);
 
         pager.setAdapter(mAdapter);
         tabs.setupWithViewPager(pager);
-        tabs.setTabTextColors(Color.YELLOW, Color.RED);
+        tabs.setTabTextColors(Color.parseColor("#FFB108"), Color.RED);
         tabs.removeAllTabs();
 
         tabs.addTab(tabs.newTab().setText("테마"));
@@ -67,11 +71,6 @@ public class MainActivity extends AppCompatActivity {
         tabs.addTab(tabs.newTab().setText("카페"));
         tabs.addTab(tabs.newTab().setText("소식"));
         tabs.addTab(tabs.newTab().setText("MY"));
-
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.menu);
-
-
 
     }
 }
