@@ -22,11 +22,11 @@ public class MyPagerAdapter extends FragmentPagerAdapter {
 
         switch (position) {
             case 0:
-                return new ThemeFragment();
+                return new HomeFragment();
             case 1:
                 return new StoreFragment();
             case 2:
-                return new CafeFragment();
+                return new ChannelFragment();
             case 3:
                 return new NewsFragment();
             case 4:

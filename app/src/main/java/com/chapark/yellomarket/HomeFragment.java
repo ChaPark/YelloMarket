@@ -23,19 +23,17 @@ import butterknife.ButterKnife;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class StoreFragment extends Fragment {
+public class HomeFragment extends Fragment {
 
 
-    public StoreFragment() {
+    public HomeFragment() {
         // Required empty public constructor
     }
-
-    @BindView(R.id.rv_list_store)
+    @BindView(R.id.rv_list_home)
     RecyclerView listView;
 
 
     MyAdapter mAdapter;
-
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -43,29 +41,27 @@ public class StoreFragment extends Fragment {
         mAdapter = new MyAdapter();
     }
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_store, container, false);
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
         ButterKnife.bind(this, view);
         listView.setAdapter(mAdapter);
         listView.setLayoutManager(new LinearLayoutManager(getContext()));
         return view;
-
     }
-
 
     @Override
     public void onStart() {
         super.onStart();
 
         List<StoreItem> list = new ArrayList<>();
-        list.add(new StoreItem(ContextCompat.getDrawable(getContext(), R.drawable.sample_0)));
-        list.add(new StoreItem(ContextCompat.getDrawable(getContext(), R.drawable.sample_1)));
-        list.add(new StoreItem(ContextCompat.getDrawable(getContext(), R.drawable.sample_2)));
-        list.add(new StoreItem(ContextCompat.getDrawable(getContext(), R.drawable.sample_3)));
-        list.add(new StoreItem(ContextCompat.getDrawable(getContext(), R.drawable.sample_4)));
-        list.add(new StoreItem(ContextCompat.getDrawable(getContext(), R.drawable.sample_5)));
+        list.add(new StoreItem(ContextCompat.getDrawable(getContext(), R.drawable.home_1)));
+        list.add(new StoreItem(ContextCompat.getDrawable(getContext(), R.drawable.home_2)));
+        list.add(new StoreItem(ContextCompat.getDrawable(getContext(), R.drawable.home_3)));
+        list.add(new StoreItem(ContextCompat.getDrawable(getContext(), R.drawable.home_4)));
+        list.add(new StoreItem(ContextCompat.getDrawable(getContext(), R.drawable.home_5)));
 
         mAdapter.setItems(list);
     }

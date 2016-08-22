@@ -1,23 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/menu_main"
-        android:title="main"
-        android:icon="@android:drawable/ic_dialog_email"
+        android:id="@+id/menu_home"
+        android:title="@string/navi_home"
+        android:icon="@drawable/ic_navi_home"
         android:orderInCategory="100" />
     <item
-        android:id="@+id/menu_add"
-        android:title="add"
-        android:icon="@android:drawable/ic_input_add"
-        android:orderInCategory="100" />
-    <item
-        android:id="@+id/menu_get"
-        android:title="get"
-        android:icon="@android:drawable/ic_input_get"
+        android:id="@+id/menu_invitation"
+        android:title="@string/navi_invitation"
+        android:icon="@drawable/ic_navi_inva"
         android:orderInCategory="101" />
     <item
-        android:id="@+id/menu_delete"
-        android:title="delete"
-        android:icon="@android:drawable/ic_input_delete"
+        android:id="@+id/menu_notice"
+        android:title="@string/navi_notice"
+        android:icon="@drawable/ic_navi_noti"
         android:orderInCategory="102" />
+    <item
+        android:id="@+id/menu_channel"
+        android:title="@string/navi_channel"
+        android:icon="@drawable/ic_navi_channel"
+        android:orderInCategory="103" />
+    <item
+        android:id="@+id/menu_setting"
+        android:title="@string/navi_setting"
+        android:icon="@drawable/ic_navi_setting"
+        android:orderInCategory="104" />
 </menu>

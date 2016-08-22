@@ -3,17 +3,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.chapark.yellomarket.StoreFragment">
+    tools:context="com.chapark.yellomarket.HomeFragment">
 
     <!-- TODO: Update blank fragment layout -->
-
 
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/rv_list_store"
+        android:id="@+id/rv_list_home"
         >
-
     </android.support.v7.widget.RecyclerView>
 
 </LinearLayout>
